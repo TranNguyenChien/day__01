@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuOpen = document.querySelector(".menuOpen");
   const menuClose = document.querySelector(".menuClose");
   const left = document.querySelector(".left");
+  const right = document.querySelector(".right");
   const menuItem = document.querySelector(".menu__item");
   const header = document.querySelector(".header");
+  const mobile = document.querySelector(".mobile");
 
-  //   if (!menuOpen || !menuClose) return;s
+  if (!menuOpen || !menuClose) return;
 
   function styleToogle(width, overflow, op) {
     left.style.width = width;
@@ -25,5 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuClose.classList.remove("is-active");
     menuOpen.classList.add("is-active");
     header.classList.add("header");
+  });
+
+  mobile.addEventListener("click", () => {
+    right.classList.add("tranlate");
+
+    console.log("hihihihi");
   });
 });
